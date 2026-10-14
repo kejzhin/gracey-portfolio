@@ -1,12 +1,17 @@
 import { ServiceItem, SkillItem, ToolItem, TestimonialItem, GalleryItem } from '../types/portfolio';
+import heroPortraitImg from '../assets/images/gracelle_hero_portrait_1792015175406.jpg';
+import aboutOutdoorImg from '../assets/images/gracelle_about_outdoor_1792015176197.jpg';
+import workingCafeImg from '../assets/images/gracelle_working_cafe_1792015176643.jpg';
+import galleryCoffeeArtImg from '../assets/images/gallery_coffee_art_1792015176302.jpg';
+import galleryCoffeeIcedImg from '../assets/images/gallery_coffee_iced_1792015176107.jpg';
 
 // Local high-fidelity generated images matching the PDF slides
 export const PORTFOLIO_ASSETS = {
-  heroPortrait: '/src/assets/images/gracelle_hero_portrait_1792015175406.jpg',
-  aboutOutdoor: '/src/assets/images/gracelle_about_outdoor_1792015176197.jpg',
-  workingCafe: '/src/assets/images/gracelle_working_cafe_1792015176643.jpg',
-  galleryCoffeeArt: '/src/assets/images/gallery_coffee_art_1792015176302.jpg',
-  galleryCoffeeIced: '/src/assets/images/gallery_coffee_iced_1792015176107.jpg',
+  heroPortrait: heroPortraitImg,
+  aboutOutdoor: aboutOutdoorImg,
+  workingCafe: workingCafeImg,
+  galleryCoffeeArt: galleryCoffeeArtImg,
+  galleryCoffeeIced: galleryCoffeeIcedImg,
 };
 
 export const PERSONAL_INFO = {

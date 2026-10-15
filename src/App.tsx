@@ -9,6 +9,7 @@ import { HeroSection } from './components/HeroSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ToolsSection } from './components/ToolsSection';
+import { ResumeSection } from './components/ResumeSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GallerySection } from './components/GallerySection';
 import { ContactSection } from './components/ContactSection';
@@ -19,7 +20,7 @@ export default function App() {
 
   // ScrollSpy to track active section
   useEffect(() => {
-    const sectionIds = ['home', 'skills', 'services', 'tools', 'testimonials', 'gallery', 'contact'];
+    const sectionIds = ['home', 'skills', 'services', 'tools', 'resume', 'testimonials', 'gallery', 'contact'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 160;
@@ -61,6 +62,9 @@ export default function App() {
 
         {/* Tool Kit */}
         <ToolsSection />
+
+        {/* Resume */}
+        <ResumeSection />
 
         {/* Client Feedback & Reviews */}
         <TestimonialsSection />

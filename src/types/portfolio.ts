@@ -1,3 +1,20 @@
+export interface WorkExperience {
+  id: string;
+  company: string;
+  location: string;
+  type: string;
+  position: string;
+  period: string;
+  description: string[];
+}
+
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  period: string;
+}
+
 export interface ServiceItem {
   id: string;
   title: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { PERSONAL_INFO, PORTFOLIO_ASSETS } from '../data/portfolioData';
+import { motion } from 'motion/react';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -20,24 +21,35 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Hand-drawn style decorative teal arrow pointing to name (Desktop) */}
-          <div className="hidden md:block absolute -right-10 lg:-right-12 top-20 w-20 lg:w-24 h-20 lg:h-24 pointer-events-none text-[#477977] z-10">
-            <svg viewBox="0 0 120 100" fill="none" className="w-full h-full drop-shadow-xs">
-              <path
-                d="M15 85 C 50 95, 80 50, 45 40 C 25 35, 30 75, 75 45 C 90 35, 100 28, 108 22"
-                stroke="currentColor"
-                strokeWidth="5.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M88 18 L 112 20 L 105 42"
-                stroke="currentColor"
-                strokeWidth="5.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, x: -10, rotate: -5 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            className="hidden md:block absolute -right-10 lg:-right-12 top-20 w-20 lg:w-24 h-20 lg:h-24 pointer-events-none text-[#477977] z-10"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="w-full h-full"
+            >
+              <svg viewBox="0 0 120 100" fill="none" className="w-full h-full drop-shadow-xs">
+                <path
+                  d="M15 85 C 50 95, 80 50, 45 40 C 25 35, 30 75, 75 45 C 90 35, 100 28, 108 22"
+                  stroke="currentColor"
+                  strokeWidth="5.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M88 18 L 112 20 L 105 42"
+                  stroke="currentColor"
+                  strokeWidth="5.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* Right: Typography & Bio Story placed directly beside the portrait */}

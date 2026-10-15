@@ -1,4 +1,4 @@
-import { ServiceItem, SkillItem, ToolItem, TestimonialItem, GalleryItem } from '../types/portfolio';
+import { ServiceItem, SkillItem, ToolItem, TestimonialItem, GalleryItem, WorkExperience, Education } from '../types/portfolio';
 import heroPortraitImg from '../assets/images/gracy.jpeg';
 import galleryImg1 from '../assets/images/4.jpeg'; // EXPERIENCE THE ART OF COFFEE!
 import galleryImg2 from '../assets/images/3.jpeg'; // AMBER ROAST
@@ -13,6 +13,75 @@ export const PORTFOLIO_ASSETS = {
   gallery3: galleryImg3,
   gallery4: galleryImg4,
 };
+
+export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    id: 'work-1',
+    company: 'LUNEX SOLAR',
+    location: 'Tampa, FL',
+    type: 'Full-time',
+    position: 'Administrative Assistant',
+    period: 'Jan 2025 - June 2026',
+    description: [
+      'Prepared and processed change orders for individual solar projects to ensure compliance and prevent post-installation issues.',
+      'Created system sites and solar layout designs to support project planning and monitor progress across various internal portals.',
+      'Developed and maintained Standard Operating Procedures (SOPs) for key workflows to improve consistency, efficiency, and onboarding processes.',
+      'Provided cross-functional administrative support to the Permitting and Engineering departments to streamline project operations.',
+      'Managed document flow by downloading, organizing, and uploading essential files into internal systems for accurate and accessible record-keeping.',
+      'Generated and updated daily reports to track projects with missing documentation or information, ensuring timely resolution and follow-up.'
+    ]
+  },
+  {
+    id: 'work-2',
+    company: 'MADERA SAI CAPITAL',
+    location: 'San Francisco, CA',
+    type: 'Full-time',
+    position: 'Executive Assistant',
+    period: 'Jan 2023 - Dec 2024',
+    description: [
+      'Provide comprehensive support to the CEO, managing both personal and professional responsibilities to optimize daily operations.',
+      'Conduct initial candidate interviews, managing recruitment efforts and ensuring a streamlined hiring process.',
+      'Prepare detailed reports, coordinate complex travel itineraries, and oversee the seamless management of executive schedules.',
+      'Assist with company commissions, bookkeeping tasks, and certificate preparation within the construction industry.',
+      'Ensure confidentiality in all matters, enhancing administrative efficiency and reducing task turnaround time by 25%.'
+    ]
+  },
+  {
+    id: 'work-3',
+    company: 'CASH HOUSE BUYERS 4 YOU',
+    location: 'Atlanta, GA',
+    type: 'Full-time',
+    position: 'Acquisitions Agent Manager',
+    period: 'Dec 2020 - Dec 2022',
+    description: [
+      'Evaluate and improve the acquisition process, focusing on strategy, execution, and performance measurement.',
+      'Prepare detailed reports for senior management, providing updates on ongoing acquisitions, pipeline development, and strategic insights.',
+      'Lead and manage a team of acquisition agents, analysts, and support staff, ensuring team alignment with company goals and objectives.'
+    ]
+  },
+  {
+    id: 'work-4',
+    company: 'AEM INVESTS',
+    location: 'Dayton, OH',
+    type: 'Part-time',
+    position: 'Administrative Virtual Assistant',
+    period: 'Sep 2020 - Dec 2020',
+    description: [
+      'Prepared documents, presentations, and reports using Microsoft Office and Google Suite to support daily operations.',
+      'Conducted in-depth online research and presented findings in a clear, organized manner to inform decision-making.',
+      'Managed social media accounts by creating and scheduling posts, engaging with audiences, and maintaining consistent brand messaging.'
+    ]
+  }
+];
+
+export const EDUCATION: Education[] = [
+  {
+    id: 'edu-1',
+    institution: 'EASTERN VISAYAS STATE UNIVERSITY',
+    degree: 'Bachelor of Science & Mathematics',
+    period: '2018 - 2022'
+  }
+];
 
 export const PERSONAL_INFO = {
   name: 'GRACEY VILLANUEVA',
@@ -74,6 +143,19 @@ export const SKILLS_LIST: SkillItem[] = [
 
 export const SERVICES_LIST: ServiceItem[] = [
   {
+    id: 'bookkeeping',
+    title: 'BOOKKEEPING',
+    description: 'Maintain accurate financial records by managing accounts payable and receivable, tracking expenses and preparing financial reports to keep your finances in order.',
+    barColor: 'peach',
+    category: 'Finance',
+    deliverables: [
+      'Accounts payable and receivable logging',
+      'Monthly expense tracking & receipt reconciliation',
+      'Client invoice generation & follow-ups',
+      'Clear, formatted weekly financial summaries'
+    ]
+  },
+  {
     id: 'general-business-admin',
     title: 'GENERAL BUSINESS ADMIN',
     description: 'Efficiently managing daily business operations, including document handling, data entry and workflow optimization ensuring your business runs smoothly and stays organized.',
@@ -100,16 +182,16 @@ export const SERVICES_LIST: ServiceItem[] = [
     ]
   },
   {
-    id: 'bookkeeping',
-    title: 'BOOKKEEPING',
-    description: 'Maintain accurate financial records by managing accounts payable and receivable, tracking expenses and preparing financial reports to keep your finances in order.',
-    barColor: 'peach',
-    category: 'Finance',
+    id: 'property-management',
+    title: 'PROPERTY MANAGEMENT',
+    description: 'Comprehensive property management services, overseeing operations, utilities, billing, and project coordination with a focus on efficiency and transparency.',
+    barColor: 'teal',
+    category: 'Real Estate',
     deliverables: [
-      'Accounts payable and receivable logging',
-      'Monthly expense tracking & receipt reconciliation',
-      'Client invoice generation & follow-ups',
-      'Clear, formatted weekly financial summaries'
+      'AppFolio tenant & lease records coordination',
+      'Utility tracking, vendor dispatch & maintenance logs',
+      'Rent collection logs & tenant communications',
+      'Move-in / move-out administrative checklists'
     ]
   },
   {
@@ -123,19 +205,6 @@ export const SERVICES_LIST: ServiceItem[] = [
       'Promotional banners, flyers & print materials',
       'Slide decks & presentation templates',
       'Brand guideline alignment & typography styling'
-    ]
-  },
-  {
-    id: 'property-management',
-    title: 'PROPERTY MANAGEMENT',
-    description: 'Comprehensive property management services, overseeing operations, utilities, billing, and project coordination with a focus on efficiency and transparency.',
-    barColor: 'teal',
-    category: 'Real Estate',
-    deliverables: [
-      'AppFolio tenant & lease records coordination',
-      'Utility tracking, vendor dispatch & maintenance logs',
-      'Rent collection logs & tenant communications',
-      'Move-in / move-out administrative checklists'
     ]
   }
 ];

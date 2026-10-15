@@ -53,7 +53,7 @@ export const ServicesSection: React.FC = () => {
           
           {/* Desktop Heading matching Slide 4 */}
           <div className="hidden md:block pb-2">
-            <h2 className="font-display font-bold text-5xl lg:text-6xl text-[#2A4F4E] tracking-tight leading-tight">
+            <h2 className="font-display font-bold text-6xl lg:text-7xl text-[#2A4F4E] tracking-tight leading-tight">
               SERVICES<br />OFFERED
             </h2>
           </div>

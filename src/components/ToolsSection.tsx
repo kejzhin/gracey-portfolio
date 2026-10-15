@@ -6,6 +6,7 @@ import {
   Layers
 } from 'lucide-react';
 import { ToolIcon } from './ToolIcon';
+import { motion } from 'motion/react';
 
 interface FlatTool {
   name: string;
@@ -105,7 +106,14 @@ export const ToolsSection: React.FC = () => {
   });
 
   return (
-    <section id="tools" className="py-24 md:py-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#477977]/15">
+    <motion.section 
+      id="tools" 
+      className="py-24 md:py-36 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#477977]/15"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       
       {/* Header */}
       <div className="text-center mb-12 relative">
@@ -114,12 +122,12 @@ export const ToolsSection: React.FC = () => {
         </h2>
 
         {/* Category Filter Pills - Horizontally Scrollable */}
-        <div className="flex flex-nowrap items-center justify-start gap-2 overflow-x-auto pb-4 scroll-smooth snap-x">
+        <div className="flex flex-nowrap items-center justify-start gap-2 overflow-x-auto pb-4 scroll-smooth max-w-4xl mx-auto">
           {CATEGORIES.map(cat => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-xs whitespace-nowrap snap-start ${
+              className={`px-2 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-xs whitespace-nowrap ${
                 selectedCategory === cat.id
                   ? 'bg-[#2A4F4E] text-white shadow-md scale-105'
                   : 'bg-white text-[#385B5A] hover:bg-[#EEF5F5] border border-[#477977]/20'
@@ -153,10 +161,10 @@ export const ToolsSection: React.FC = () => {
           {filteredTools.map((tool, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-6 border-2 border-[#477977]/15 hover:border-[#477977]/55 shadow-xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col items-center justify-center text-center group cursor-default"
+              className="flex flex-col items-center justify-center text-center group cursor-default p-2 transition-all duration-300 transform hover:-translate-y-1"
             >
-              <ToolIcon type={tool.name} className="w-14 h-14 shrink-0 shadow-sm mb-3.5 group-hover:scale-110 transition-transform duration-200" />
-              <h3 className="font-display font-bold text-sm sm:text-base text-[#2A4F4E] tracking-tight group-hover:text-[#477977] transition-colors">
+              <ToolIcon type={tool.name} className="w-16 h-16 shrink-0 shadow-sm mb-4 group-hover:scale-110 transition-transform duration-200" />
+              <h3 className="font-display font-bold text-base text-[#2A4F4E] tracking-tight group-hover:text-[#477977] transition-colors">
                 {tool.name}
               </h3>
             </div>
@@ -164,6 +172,6 @@ export const ToolsSection: React.FC = () => {
         </div>
       )}
 
-    </section>
+    </motion.section>
   );
 };

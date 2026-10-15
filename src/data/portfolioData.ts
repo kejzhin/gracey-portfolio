@@ -15,7 +15,7 @@ export const PORTFOLIO_ASSETS = {
 };
 
 export const PERSONAL_INFO = {
-  name: 'GRACELLE VILLANUEVA',
+  name: 'GRACEY VILLANUEVA',
   nickname: 'Gracey',
   title: 'Virtual Assistant',
   headline: 'Hi! I am a Virtual Assistant!',

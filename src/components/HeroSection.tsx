@@ -51,7 +51,7 @@ export const HeroSection: React.FC = () => {
           {/* Prominent Name Heading */}
           <div className="space-y-0.5">
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#2A4F4E]">
-              GRACELLE
+              GRACEY
             </h1>
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#2A4F4E]">
               VILLANUEVA

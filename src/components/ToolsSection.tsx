@@ -114,12 +114,12 @@ export const ToolsSection: React.FC = () => {
         </h2>
 
         {/* Category Filter Pills - Horizontally Scrollable */}
-        <div className="flex flex-nowrap items-center justify-start gap-2 overflow-x-auto pb-4">
+        <div className="flex flex-nowrap items-center justify-start gap-2 overflow-x-auto pb-4 scroll-smooth snap-x">
           {CATEGORIES.map(cat => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-xs whitespace-nowrap ${
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-xs whitespace-nowrap snap-start ${
                 selectedCategory === cat.id
                   ? 'bg-[#2A4F4E] text-white shadow-md scale-105'
                   : 'bg-white text-[#385B5A] hover:bg-[#EEF5F5] border border-[#477977]/20'

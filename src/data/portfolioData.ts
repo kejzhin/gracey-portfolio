@@ -1,17 +1,17 @@
 import { ServiceItem, SkillItem, ToolItem, TestimonialItem, GalleryItem } from '../types/portfolio';
-import heroPortraitImg from '../assets/images/gracelle_hero_portrait_1792015175406.jpg';
-import aboutOutdoorImg from '../assets/images/gracelle_about_outdoor_1792015176197.jpg';
-import workingCafeImg from '../assets/images/gracelle_working_cafe_1792015176643.jpg';
-import galleryCoffeeArtImg from '../assets/images/gallery_coffee_art_1792015176302.jpg';
-import galleryCoffeeIcedImg from '../assets/images/gallery_coffee_iced_1792015176107.jpg';
+import heroPortraitImg from '../assets/images/gracy.jpeg';
+import galleryImg1 from '../assets/images/4.jpeg'; // EXPERIENCE THE ART OF COFFEE!
+import galleryImg2 from '../assets/images/3.jpeg'; // AMBER ROAST
+import galleryImg3 from '../assets/images/1.jpeg'; // BUT FIRST, COFFEE
+import galleryImg4 from '../assets/images/2.jpeg'; // PAYDAY SALE!
 
-// Local high-fidelity generated images matching the PDF slides
+// Local high-fidelity assets matching the PDF slides
 export const PORTFOLIO_ASSETS = {
   heroPortrait: heroPortraitImg,
-  aboutOutdoor: aboutOutdoorImg,
-  workingCafe: workingCafeImg,
-  galleryCoffeeArt: galleryCoffeeArtImg,
-  galleryCoffeeIced: galleryCoffeeIcedImg,
+  gallery1: galleryImg1,
+  gallery2: galleryImg2,
+  gallery3: galleryImg3,
+  gallery4: galleryImg4,
 };
 
 export const PERSONAL_INFO = {
@@ -22,6 +22,7 @@ export const PERSONAL_INFO = {
   email: 'vagracey1@gmail.com',
   phone: '+639958850127',
   displayPhone: '+63 995 885 0127',
+  linkedin: 'www.linkedin.com/in/gracelle-villanueva',
   location: 'Philippines',
   city: 'Tacloban City, Philippines',
   ctaText: 'work with me :)',
@@ -263,39 +264,39 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'EXPERIENCE THE ART OF COFFEE!',
     subtitle: 'Bloom Coffee Co. In-Store Campaign',
     category: 'Graphic Design',
-    image: PORTFOLIO_ASSETS.galleryCoffeeArt,
-    caption: 'Clean, warm promotional banner design crafted for Bloom Coffee Co. highlighting artisanal espresso blends with rich typography and coffee imagery.',
+    image: PORTFOLIO_ASSETS.gallery1,
+    caption: 'Exclusive blends crafted for coffee lovers. Monday-Saturday 9:00 AM - 10:00 PM, Downtown Main Street.',
     tags: ['Branding', 'Social Media', 'Typography', 'Canva'],
     specs: 'Instagram & Facebook Feed (1:1)'
   },
   {
     id: 'gallery-2',
-    title: 'PAYDAY SALE! 25% OFF SPECIALTY FRAPPES',
-    subtitle: 'Bloom Coffee Co. Promotional Poster',
-    category: 'Marketing Poster',
-    image: PORTFOLIO_ASSETS.galleryCoffeeIced,
-    caption: 'High-converting promotional campaign graphic designed for seasonal payday discounts, combining bold typography with decadent beverage photography.',
-    tags: ['Promo Design', 'Sales Campaign', 'Food & Beverage', 'Layout'],
-    specs: 'Promotional Social Ad (1:1)'
+    title: 'AMBER ROAST',
+    subtitle: 'Bloom Coffee Co. Product Showcase',
+    category: 'Product Spotlight',
+    image: PORTFOLIO_ASSETS.gallery2,
+    caption: 'Lovers of smooth, balanced coffee with a luxurious feel.',
+    tags: ['Product Launch', 'Visual Identity', 'Social Campaign'],
+    specs: 'Social Media Feed (1:1)'
   },
   {
     id: 'gallery-3',
-    title: 'AMBER ROAST - SMOOTH & BALANCED',
-    subtitle: 'Bloom Coffee Co. Product Showcase',
-    category: 'Product Spotlight',
-    image: PORTFOLIO_ASSETS.galleryCoffeeIced,
-    caption: 'Signature roast introduction post emphasizing premium flavor notes, targeted at coffee connoisseurs looking for everyday luxury.',
-    tags: ['Product Launch', 'Copy Alignment', 'Visual Identity'],
-    specs: 'Digital Poster & Story'
+    title: 'BUT FIRST, COFFEE',
+    subtitle: 'Bloom Coffee Co. Lifestyle Series',
+    category: 'Brand Awareness',
+    image: PORTFOLIO_ASSETS.gallery3,
+    caption: 'Artisan morning brew promotion with heart latte art and coffee beans illustration.',
+    tags: ['Brand Lifestyle', 'Organic Content', 'Canva'],
+    specs: 'Social Media Feed (1:1)'
   },
   {
     id: 'gallery-4',
-    title: 'BUT FIRST, COFFEE & ARTISAN BREWS',
-    subtitle: 'Bloom Coffee Co. Lifestyle Series',
-    category: 'Brand Awareness',
-    image: PORTFOLIO_ASSETS.galleryCoffeeArt,
-    caption: 'Engaging morning lifestyle graphic featuring minimalist latte art and coffee bean illustrations designed to drive organic daily saves and shares.',
-    tags: ['Brand Lifestyle', 'Illustration Accent', 'Organic Content'],
-    specs: 'Social Media Feed (1:1)'
+    title: 'PAYDAY SALE!',
+    subtitle: 'Bloom Coffee Co. Promotional Poster',
+    category: 'Marketing Poster',
+    image: PORTFOLIO_ASSETS.gallery4,
+    caption: 'Get cashback for every coffee purchase. Order Now. Cashback up to 25%.',
+    tags: ['Promo Design', 'Sales Campaign', 'Food & Beverage'],
+    specs: 'Promotional Social Ad (1:1)'
   }
 ];

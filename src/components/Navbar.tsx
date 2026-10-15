@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-  onOpenSearch: () => void;
   activeSection: string;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeSection }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -18,12 +17,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeSection }) =
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Removed skills, services, tools as requested
   const navItems = [
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'About Me', href: '#about', id: 'about' },
-    { label: 'Skills', href: '#skills', id: 'skills' },
-    { label: 'Services', href: '#services', id: 'services' },
-    { label: 'Tools', href: '#tools', id: 'tools' },
     { label: 'Testimonials', href: '#testimonials', id: 'testimonials' },
     { label: 'Gallery', href: '#gallery', id: 'gallery' },
     { label: 'Contact', href: '#contact', id: 'contact' },
@@ -48,24 +45,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeSection }) =
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#FAF5EB]/90 backdrop-blur-md shadow-xs border-b border-[#477977]/15 py-3' 
+          ? 'bg-[#FAF5EB]/95 backdrop-blur-md shadow-xs border-b border-[#477977]/15 py-3.5' 
           : 'bg-[#FAF5EB] py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
-          
-          {/* Logo / Brand Name for Mobile & Quick jump */}
-          <a 
-            href="#home" 
-            onClick={(e) => handleNavClick(e, '#home')}
-            className="font-display font-bold text-lg tracking-tight text-[#2A4F4E] hover:text-[#477977] transition-colors md:hidden shrink-0"
-          >
-            GRACELLE V.
-          </a>
+        <div className="flex items-center justify-center md:justify-center relative">
 
-          {/* Desktop Navigation Links matching the PDF layout */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#2A4F4E] font-medium text-sm lg:text-base">
+          {/* Desktop Navigation Links (Home, About Me, Testimonials, Gallery, Contact) */}
+          <nav className="hidden md:flex items-center space-x-8 lg:space-x-12 text-[#2A4F4E] font-medium text-sm lg:text-base">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -86,31 +74,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, activeSection }) =
             })}
           </nav>
 
-          {/* Search Pill Button matching the PDF header search bar */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onOpenSearch}
-              className="flex items-center justify-between w-40 sm:w-56 md:w-64 h-9 sm:h-10 pl-4 pr-1.5 rounded-full border-2 border-[#477977]/40 bg-white/70 hover:bg-white hover:border-[#477977] transition-all shadow-2xs group cursor-pointer text-left"
-              title="Search portfolio (Ctrl+K)"
-              aria-label="Open search dialog"
-            >
-              <span className="text-xs sm:text-sm text-[#719493] truncate group-hover:text-[#477977]">
-                Search...
-              </span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#477977] text-white flex items-center justify-center shrink-0 group-hover:bg-[#396361] transition-transform duration-200 group-hover:scale-105">
-                <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-              </div>
-            </button>
-
-            {/* Mobile Menu Toggle Button */}
+          {/* Mobile Bar: Simple menu toggle */}
+          <div className="md:hidden flex items-center justify-between w-full">
+            <span className="text-xs font-semibold tracking-wider uppercase text-[#537574]">
+              Menu
+            </span>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-[#2A4F4E] hover:bg-[#EEF5F5] transition-colors"
+              className="p-2 rounded-lg text-[#2A4F4E] hover:bg-[#EEF5F5] transition-colors"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+
         </div>
 
         {/* Mobile Dropdown Menu */}
